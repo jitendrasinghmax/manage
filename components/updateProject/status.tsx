@@ -1,7 +1,7 @@
 import { Badge } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { Button } from "../ui/button";
-import React, { SetStateAction, useState } from "react";
+import React, { useState } from "react";
 import { useFetch } from "@/hook/useFetch";
 import Loading from "../loading";
 

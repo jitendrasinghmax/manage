@@ -1,5 +1,5 @@
 import { useFetch } from "@/hook/useFetch"
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Button } from "./ui/button";
 import { useContextProvider } from "@/context/context";
 

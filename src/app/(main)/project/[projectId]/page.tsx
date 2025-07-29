@@ -10,9 +10,7 @@ import { useEffect, useState } from "react";
 import { useFetch } from "@/hook/useFetch";
 import Status from "@/components/updateProject/status";
 import EditMember from "@/components/updateProject/editMember";
-import { CreateTaskDialog } from "@/components/createTask";
 import { CardContainer } from "@/components/card/task/cardsContainer";
-import { Separator } from "@/components/ui/separator";
 
 export default function ProjectWorkspace() {
   const parms = useParams();

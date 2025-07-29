@@ -6,7 +6,7 @@ import { Button } from "./ui/button"
 import { useFetch } from "@/hook/useFetch"
 import { useRouter } from "next/navigation"
 import { Command } from "cmdk"
-import { CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from "@/components/ui/command"
+import { CommandInput, CommandList } from "@/components/ui/command"
 
 export function CreateOrg() {
     const [inputData, setInputData] = useState({

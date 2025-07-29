@@ -1,5 +1,4 @@
 import { Button } from "./ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select"
 const statusOptions = ["ALL", "TODO", "IN_PROGRESS", "REVIEW", "DONE"];
 
 export default function ({filterStatus,setFilterStatus}){

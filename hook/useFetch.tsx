@@ -1,9 +1,7 @@
-import { useState } from "react"
 import { toast } from "sonner";
 
 export const useFetch = () => {
-    const [resp, setResp] = useState(null);
-    const [err, setError] = useState(null);
+    
     const post = async (url: string, method: "GET" | "POST", body: any) => {
         try {
             const result = await fetch(url, {
@@ -15,8 +13,6 @@ export const useFetch = () => {
             })
             if (result.ok) {
                 const data = await result.json();
-                console.log(data)
-                setResp(data);
                 return data;
             }
             else{
@@ -32,5 +28,5 @@ export const useFetch = () => {
             toast((e as Error).message)
         }
     }
-    return { post, resp, err }
+    return { post }
 }

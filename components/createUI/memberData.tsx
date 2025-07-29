@@ -1,5 +1,3 @@
-import { useFetch } from "@/hook/useFetch"
-import { useEffect, useState } from "react"
 import { Skeleton } from "../ui/skeleton";
 import { useContextProvider } from "@/context/context";
 

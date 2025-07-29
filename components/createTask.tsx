@@ -13,6 +13,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover"
 import { useFetch } from "@/hook/useFetch"
 import { Checkbox } from "./ui/checkbox"
 import { useContextProvider } from "@/context/context"
+import Loading from "./loading"
 
 interface CreateTaskDialogProps {
     projectId: string
@@ -151,9 +152,9 @@ export function CreateTaskDialog({ projectId }: CreateTaskDialogProps) {
                             })}
                         </div>
                     </div>
-                    <Button onClick={handleSubmit} className="w-full">
-                        Create Task
-                    </Button>
+                    {
+                        loading?<Button className="w-full"><Loading/></Button>:<Button onClick={handleSubmit} className="w-full">Create Task</Button>
+                    }
                 </div>
             </DialogContent>
         </Dialog>

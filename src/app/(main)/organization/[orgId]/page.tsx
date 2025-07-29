@@ -15,14 +15,11 @@ export default function OrganizationPage() {
   const { orgId } = useParams<{ orgId: string }>();
   const { post } = useFetch();
   const { org, setOrg } = useContextProvider();
-  const [orgs, setOrgs] = useState([]);
   const [openDiolog,setOpenDialog]=useState(false);
 
   const getOrganizationHandler = async () => {
     const orgResp = await post(`/api/organization/get`, "POST", { orgId });
     if (orgResp) setOrg(orgResp.org);
-    const orgsResp = await post("/api/organization/getAll", "POST", {});
-    if (orgsResp) setOrgs(orgsResp.orgs);
   };
 
   useEffect(() => {

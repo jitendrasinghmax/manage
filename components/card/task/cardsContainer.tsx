@@ -2,11 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { useFetch } from "@/hook/useFetch";
-import { useContextProvider } from "@/context/context";
 
 import Filter from "@/components/filter";
 import Card from "./card";
-import { Button } from "@/components/ui/button";
 import { CreateTaskDialog } from "@/components/createTask";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -21,14 +19,6 @@ type Task = {
   members: string[];
   projectId: string;
 };
-
-const priorityColorMap = {
-  LOW: "bg-green-500",
-  MEDIUM: "bg-yellow-500",
-  HIGH: "bg-orange-500",
-  URGENT: "bg-red-600",
-};
-
 
 export const CardContainer = ({ projectId }: { projectId: string }) => {
   const { post } = useFetch();

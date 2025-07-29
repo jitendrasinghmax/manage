@@ -27,7 +27,7 @@ export const ManageMember = () => {
     if (email.length < 1) return;
     const usersResp = await post('/api/user/getUserByEmail', "POST", { email })
     if (usersResp) {
-      setUser((prev) => usersResp.users.filter((u) => orgMembers.every((m) => u.id != m.id)))
+      setUser(() => usersResp.users.filter((u) => orgMembers.every((m) => u.id != m.id)))
     }
   }
   const addMemberToOrg = async (id: string) => {
