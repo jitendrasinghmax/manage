@@ -1,7 +1,7 @@
 import { getUser } from "@/server action/user";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
-export async function POST(req:NextRequest){
+export async function POST(){
     try{
         const user=await getUser();
         return NextResponse.json({msg:"user fetched successfully", user}, {status: 200});

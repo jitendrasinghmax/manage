@@ -1,4 +1,4 @@
-import { getUserById, getUsersByEmail } from "@/server action/user";
+import { getUserById } from "@/server action/user";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
