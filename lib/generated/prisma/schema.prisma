@@ -5,8 +5,9 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client-js"
-  output   = "../lib/generated/prisma"
+  provider      = "prisma-client-js"
+  output        = "../lib/generated/prisma"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
 }
 
 datasource db {
@@ -57,12 +58,10 @@ model Task {
   deadline    DateTime
   priority    Priority
   status      TaskStatus @default(TODO)
-
-  members   String[] // array of user IDs
-  projectId String // reference to the parent project
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  members     String[] // array of user IDs
+  projectId   String // reference to the parent project
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
 }
 
 enum Priority {
