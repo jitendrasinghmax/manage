@@ -1,4 +1,4 @@
-import { PrismaClient } from "./generated/prisma";
+import { PrismaClient } from '@prisma/client'
 
 declare global {
   // Prevent redeclaration during hot-reload in dev
